@@ -1,0 +1,55 @@
+* {
+    margin: 0px;
+}
+
+:root {
+    --marrom: rgb(105, 60, 39);
+    --tamanho-da-mesa: 80vh;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+}
+
+.column, body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.carta-virada {
+    background-color: black;
+    justify-self: center;
+    height: 100%;
+    width: 75%;
+}
+
+.carta-revelada {
+    background-color: white;
+    font-size: 6rem;
+    justify-self: center;
+    text-align: center;
+    height: 100%;
+    width: 75%;
+}
+
+#mesa {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: calc(var(--tamanho-da-mesa) / 20);
+    padding: calc(var(--tamanho-da-mesa) / 40);
+    background-color: var(--marrom);
+    object-fit: contain;
+    height: var(--tamanho-da-mesa);
+    width: var(--tamanho-da-mesa);
+}
